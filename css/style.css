@@ -1,0 +1,134 @@
+:root{
+    --yell:#FFA500;
+    --white:white;
+    --gray: #f1f1f1;
+    --marg:10px;
+    --padd:10px;
+
+    
+}
+body{
+    box-sizing: border-box;
+    margin:0;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Roboto Slab', serif;
+}
+#navbar{
+background-color: var(--yell);
+padding:20px;
+color: var(--white);
+
+}
+#title{
+    font-size: 20px;
+    font-weight: 600;
+}
+.container{
+    display:flex;
+    align-items: center;
+
+}
+.section_one,.section_two{
+    background-color: var(--gray);
+    padding:10px;
+    margin:10px;
+    width:50%;
+    border-radius: 10px;
+    overflow: auto;
+}
+.btn-primary{
+    /* margin:10px; */
+    background-color: var(--yell);
+    border: none;
+}
+.btn-primary:hover{
+    background-color: var(--yell);
+}
+.item_div{
+    margin:10px;
+}
+.list_item{
+    display:flex;
+    background-color: var(--yell);
+    /* margin:10px; */
+    padding: 20px;
+    /* border-radius: 5px; */
+    cursor: pointer;
+}
+.task_item{
+    display:flex;
+    background-color: var(--white);
+    /* margin:10px; */
+    padding: 5px 8px;
+    
+    cursor: pointer;  
+}
+.task_container{
+    background-color: var(--white);
+    max-height: 0;
+
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  
+  
+    /* background-color: var(--gray); */
+   
+}
+
+.list_title{
+    width:95%;
+}
+.edit_del_list{
+ width:5%;
+}
+.checked_title{
+    display: flex;
+}
+
+.edit_list,.del_list{
+margin:5px;
+cursor: pointer;
+}
+.empty_list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-style: italic;
+    padding:40px;
+    
+}
+
+.loader {
+    margin:auto;
+    border: 10px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 10px solid #FFA500;
+    border-bottom: 10px solid #FFA500;
+    width: 80px;
+    height: 80px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+  }
+  
+  /* Safari */
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+@media screen and (max-width: 820px){
+ .container{
+    flex-direction: column;
+ }
+ .section_one,.section_two{
+    width: 100%;
+ }
+
+  
+  }
